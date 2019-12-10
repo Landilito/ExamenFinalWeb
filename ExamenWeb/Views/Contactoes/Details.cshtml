@@ -1,0 +1,50 @@
+﻿@model ExamenWeb.Models.Contacto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Contacto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Documento de identidad")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DocumentoIdentidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Fecha de creacion")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCreacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ContactoID }) |
+    @Html.ActionLink("Volver a contactos", "Index")
+</p>

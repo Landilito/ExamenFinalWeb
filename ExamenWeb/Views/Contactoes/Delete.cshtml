@@ -1,0 +1,55 @@
+﻿@model ExamenWeb.Models.Contacto
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar contacto</h2>
+
+<h3>Quieres eliminar este contacto?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Docuemnto de identiad")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DocumentoIdentidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Fecha de creacion")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCreacion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+            @Html.ActionLink("Volver a contactos", "Index")
+        </div>
+    }
+</div>

@@ -11,6 +11,7 @@ namespace ExamenWeb.Models
         [Key]
         public int ContactoID { get; set; }
         public string Nombre { get; set; }
+        public string Apellido { get; set; }
         public string DocumentoIdentidad { get; set; }
         [DataType(DataType.Date)]
         public string FechaCreacion { get; set; }
